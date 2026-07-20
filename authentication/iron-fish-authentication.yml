@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: https://ironfish.network/developers/documentation/integration_rpc + live probe of https://api.ironfish.network
+docs: https://ironfish.network/developers/documentation/integration_rpc
+summary:
+  types: [none]
+  note: >-
+    Iron Fish is a self-hosted node model. The public REST API at
+    api.ironfish.network serves read endpoints (e.g. /blocks, /health) with no
+    authentication. The node RPC server is bound locally by the operator; access
+    control is a matter of network exposure (host/port binding and optional TLS
+    on the multisig broker) rather than an API-key or OAuth scheme.
+schemes:
+- name: none
+  surface: Public REST API (api.ironfish.network)
+  type: none
+  applies_to: read endpoints
+  evidence: GET /blocks and GET /health return 200 without credentials.
+- name: node-local
+  surface: Node RPC (TCP/IPC/HTTP, default TCP port 8020)
+  type: none
+  note: >-
+    No token is required by default; the operator controls exposure via
+    rpcHttpHost / rpcTcpHost binding. TLS + encryption are available on the
+    multisig broker server (added in ironfish 2.8.0).
