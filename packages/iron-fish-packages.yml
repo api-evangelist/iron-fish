@@ -1,0 +1,39 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/~iron-fish + https://ironfish.network/developers/documentation/install-npm
+packages:
+- language: javascript
+  registry: npm
+  name: ironfish
+  url: https://www.npmjs.com/package/ironfish
+  install: npm install -g ironfish
+  version: 2.12.0
+  official: true
+  kind: cli
+  description: CLI for running and interacting with an Iron Fish node.
+- language: javascript
+  registry: npm
+  name: "@ironfish/sdk"
+  url: https://www.npmjs.com/package/@ironfish/sdk
+  install: npm install @ironfish/sdk
+  version: 2.12.0
+  official: true
+  kind: sdk
+  description: SDK for running and interacting with an Iron Fish node.
+- language: rust
+  registry: npm
+  name: "@ironfish/rust-nodejs"
+  url: https://www.npmjs.com/package/@ironfish/rust-nodejs
+  install: npm install @ironfish/rust-nodejs
+  version: 2.10.0
+  official: true
+  kind: native-bindings
+  description: Node.js bindings for the Rust code required by the Iron Fish SDK.
+- language: shell
+  registry: homebrew
+  name: ironfish
+  url: https://github.com/iron-fish/homebrew-brew
+  install: brew install iron-fish/brew/ironfish
+  official: true
+  kind: cli
+  description: Homebrew tap to install the ironfish CLI on macOS.

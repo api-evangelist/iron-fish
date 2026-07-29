@@ -1,0 +1,51 @@
+generated: '2026-07-19'
+method: searched
+source: https://ironfish.network/developers/documentation/integration_rpc + live probe of https://api.ironfish.network
+summary: >-
+  Iron Fish exposes two distinct developer surfaces. (1) A self-hosted node RPC
+  server, reachable over TCP, IPC, and HTTP, using JSON request/response with
+  optional server-side streaming. (2) A hosted public REST API at
+  api.ironfish.network (the block-explorer / faucet backend) using a
+  list/object JSON envelope with cursor-style pagination metadata.
+surfaces:
+- name: Node RPC
+  transports: [tcp, ipc, http]
+  default_tcp_port: 8020
+  http_enable:
+  - ironfish config:set enableRpcHttp true
+  - ironfish config:set rpcHttpHost 0.0.0.0
+  format: json
+  streaming: true
+  streaming_note: >-
+    Many methods accept a { stream: true } flag and return incremental JSON
+    messages (e.g. followChainStream, getTransactionStream, blockTemplateStream,
+    getLogStream, onGossip).
+  namespaces: [chain, wallet, node, peer, miner, config, event, mempool, worker]
+- name: Public REST API
+  base_url: https://api.ironfish.network
+  format: json
+  auth: none-required-for-reads
+  envelope:
+    list: '{ "object": "list", "data": [ ... ], "metadata": { ... } }'
+    item: 'each item carries an "object" discriminator field (e.g. "block")'
+  pagination:
+    style: cursor
+    response_fields: [metadata.has_next, metadata.has_previous]
+    request_params: [limit]
+  health_endpoint: /health
+idempotency:
+  supported: false
+  note: >-
+    No idempotency-key contract is documented. On-chain writes (transaction
+    broadcast/submit) are deduplicated by the network at the transaction-hash
+    level rather than by a client-supplied idempotency key.
+versioning:
+  scheme: semver
+  note: RPC and SDK versions track the ironfish package release (semver); see changelog/.
+error_envelope:
+  rest: HTTP status codes with JSON bodies.
+  rpc: RPC responses carry an error channel alongside the JSON result stream.
+cross_reference:
+  changelog: changelog/iron-fish-changelog.yml
+  authentication: authentication/iron-fish-authentication.yml
+  cli: cli/iron-fish-cli.yml

@@ -1,0 +1,42 @@
+# Iron Fish
+
+> Iron Fish is a zero-knowledge Layer 1 blockchain delivering optional privacy for cryptocurrency transactions. Developers integrate through a self-hosted node RPC server (TCP/IPC/HTTP, JSON with streaming) and a hosted public REST API, with a first-party JavaScript SDK and the `ironfish` CLI.
+
+## APIs
+
+- [Iron Fish Public REST API](https://api.ironfish.network): Hosted block-explorer/faucet API; list envelope with cursor pagination (base https://api.ironfish.network).
+- [Iron Fish Node RPC](https://ironfish.network/developers/documentation/integration_rpc): Self-hosted node RPC over TCP/IPC/HTTP; namespaces chain, wallet, node, peer, miner, config, event, mempool, worker.
+
+## Docs
+
+- [Developer Documentation](https://ironfish.network/developers/documentation): Main developer docs hub.
+- [RPC Integration Guide](https://ironfish.network/developers/documentation/integration_rpc): How to communicate with a node over RPC.
+- [Creating Transactions](https://ironfish.network/developers/documentation/integration_transactions): Building and posting transactions.
+- [Install via NPM / CLI](https://ironfish.network/developers/documentation/install-npm): Installing the ironfish CLI and node.
+- [Whitepaper](https://ironfish.network/learn/whitepaper): Protocol design and privacy model.
+
+## Packages
+
+- [ironfish (CLI)](https://www.npmjs.com/package/ironfish): `npm install -g ironfish`
+- [@ironfish/sdk](https://www.npmjs.com/package/@ironfish/sdk): `npm install @ironfish/sdk`
+- [@ironfish/rust-nodejs](https://www.npmjs.com/package/@ironfish/rust-nodejs): Rust/Node bindings for the SDK.
+
+## Repositories
+
+- [iron-fish/ironfish](https://github.com/iron-fish/ironfish): Core node, SDK, and CLI.
+- [iron-fish/ironfish-api](https://github.com/iron-fish/ironfish-api): Public Iron Fish REST API service.
+
+## Community
+
+- [Discord](https://discord.ironfish.network/): Developer and community chat.
+- [Blog](https://ironfish.network/learn/blog): Announcements and engineering posts.
+- [FAQ](https://ironfish.network/learn/faq): Frequently asked questions.
+
+## Artifacts
+
+- [packages/iron-fish-packages.yml](packages/iron-fish-packages.yml)
+- [cli/iron-fish-cli.yml](cli/iron-fish-cli.yml)
+- [conventions/iron-fish-conventions.yml](conventions/iron-fish-conventions.yml)
+- [authentication/iron-fish-authentication.yml](authentication/iron-fish-authentication.yml)
+- [changelog/iron-fish-changelog.yml](changelog/iron-fish-changelog.yml)
+- [security/iron-fish-domain-security.yml](security/iron-fish-domain-security.yml)

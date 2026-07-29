@@ -1,0 +1,45 @@
+generated: '2026-07-19'
+method: searched
+source: https://ironfish.network/developers/documentation/install-npm
+binary: ironfish
+description: First-party command-line interface for running and interacting with an Iron Fish node.
+packaged_in: packages/iron-fish-packages.yml
+install:
+- method: npm
+  command: npm install -g ironfish
+- method: homebrew
+  command: brew install iron-fish/brew/ironfish
+- method: source
+  command: git clone https://github.com/iron-fish/ironfish && yarn install
+command_groups:
+- name: blocks
+  summary: Display block header information.
+- name: ceremony
+  summary: Contribute randomness to the trusted setup ceremony.
+- name: chain
+  summary: Access chain and asset information.
+- name: config
+  summary: Manage node configuration settings.
+- name: mempool
+  summary: View mempool status.
+- name: migrations
+  summary: Track database migration statuses.
+- name: miners
+  summary: Operate mining pools and miners.
+- name: peers
+  summary: Manage peer connections.
+- name: rpc
+  summary: Interact with the node RPC layer.
+- name: wallet
+  summary: Manage accounts, balances, and transactions (includes multisig subcommands).
+- name: workers
+  summary: Monitor the worker pool status.
+key_flows:
+- name: Start a node
+  command: ironfish start
+- name: Enable HTTP RPC
+  command: ironfish config:set enableRpcHttp true
+- name: Create an account
+  command: ironfish wallet:create
+- name: Send a transaction
+  command: ironfish wallet:send

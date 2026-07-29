@@ -1,0 +1,57 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/iron-fish/ironfish/releases
+scheme: semver
+current_version: 2.12.0
+entries:
+- version: 2.12.0
+  date: '2025-08-12'
+  breaking: false
+  highlights:
+  - Support new Chainport bridge changes.
+- version: 2.11.0
+  date: '2025-03-04'
+  breaking: true
+  highlights:
+  - Added WASM support for web development.
+  - Added ledger flags to accounts.
+  breaking_notes:
+  - 'RPC & SDK: removed transaction sort.'
+  - 'RPC & SDK: removed a wallet method.'
+  - 'RPC & SDK: deletes multisig identity on import.'
+- version: 2.10.0
+  date: '2024-12-17'
+  breaking: true
+  highlights:
+  - Introduced WASM bindings.
+  - Expanded ledger functionality.
+  breaking_notes:
+  - 'SDK: renamed multisig export.'
+- version: 2.9.0
+  date: '2024-11-07'
+  breaking: true
+  highlights:
+  - Ledger and multisig improvements.
+  - Consume Rust crates from crates.io.
+  breaking_notes:
+  - 'SDK: account head parameter and ProofGenerationKey construction changes.'
+- version: 2.8.1
+  date: '2024-10-10'
+  breaking: false
+  highlights:
+  - Resolved @ledgerhq/errors package dependency.
+- version: 2.8.0
+  date: '2024-10-09'
+  breaking: false
+  highlights:
+  - Enhanced multisig broker server with TLS and encryption support.
+- version: 2.7.0
+  date: '2024-09-27'
+  breaking: false
+  highlights:
+  - Ledger DKG CLI commands and multisig account improvements.
+- version: 2.6.0
+  date: '2024-09-20'
+  breaking: false
+  highlights:
+  - Wallet Encryption feature.

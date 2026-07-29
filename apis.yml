@@ -1,8 +1,17 @@
 aid: iron-fish
 name: Iron Fish
-description: Iron Fish is a company surfaced as a portfolio company of a16z, electric-capital and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Iron Fish is a zero-knowledge Layer 1 blockchain that brings optional,
+  best-in-class privacy to cryptocurrency. Built on zk-SNARK cryptography, it
+  lets anyone send, receive, and bridge assets privately across 20+
+  EVM-compatible chains while running their own node. For developers, Iron Fish
+  exposes a self-hosted node RPC server (over TCP, IPC, and HTTP with JSON and
+  streaming responses) organized into chain, wallet, node, peer, miner, config,
+  event, mempool, and worker namespaces, plus a hosted public REST API at
+  api.ironfish.network powering the block explorer and faucet. Integration is
+  supported by a first-party JavaScript SDK (@ironfish/sdk), Rust/Node bindings,
+  and the ironfish CLI for node operation, wallet management, mining, and
+  multisig. Backed by a16z and Electric Capital.
 url: https://raw.githubusercontent.com/api-evangelist/iron-fish/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +20,46 @@ x-backed-by:
 - electric-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://avatars.githubusercontent.com/u/43299557?v=4
 tags:
-- Company
-apis: []
+- Blockchain
+- Cryptocurrency
+- Privacy
+- Zero Knowledge
+- Layer 1
+- Web3
+- RPC
+- Wallet
+apis:
+- name: Iron Fish Public REST API
+  description: >-
+    Hosted public REST API (the block-explorer and faucet backend) exposing
+    blocks, transactions, and network data with a list/object JSON envelope and
+    cursor-style pagination. No authentication required for read endpoints.
+  humanURL: https://github.com/iron-fish/ironfish-api
+  baseURL: https://api.ironfish.network
+  tags:
+  - Blockchain
+  - Block Explorer
+  - REST
+  properties:
+  - type: APIReference
+    url: https://ironfish.network/developers/documentation/integration_rpc
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +68,44 @@ maintainers:
 common:
 - type: Website
   url: https://ironfish.network/
+- type: DeveloperPortal
+  url: https://ironfish.network/developers/documentation
+- type: Documentation
+  url: https://ironfish.network/developers/documentation
+- type: APIReference
+  url: https://ironfish.network/developers/documentation/integration_rpc
+- type: GettingStarted
+  url: https://ironfish.network/developers/documentation/install-npm
+- type: GitHubOrganization
+  url: https://github.com/iron-fish
+- type: Blog
+  url: https://ironfish.network/learn/blog
+- type: Support
+  url: https://discord.ironfish.network/
+- type: TermsOfService
+  url: https://ironfish.network/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://ironfish.network/privacy-policy
+- type: Whitepaper
+  url: https://ironfish.network/learn/whitepaper
+- type: Packages
+  url: packages/iron-fish-packages.yml
+- type: SDKs
+  url: packages/iron-fish-packages.yml
+- type: CLI
+  url: cli/iron-fish-cli.yml
+- type: Authentication
+  url: authentication/iron-fish-authentication.yml
+- type: Conventions
+  url: conventions/iron-fish-conventions.yml
+- type: ChangeLog
+  url: changelog/iron-fish-changelog.yml
+- type: LLMsTxt
+  url: llms/iron-fish-llms.txt
+- type: DomainSecurity
+  url: security/iron-fish-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
