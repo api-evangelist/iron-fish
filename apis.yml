@@ -44,6 +44,15 @@ tags:
 - Layer 1
 - Web3
 - RPC
+- Wallets
+tags_raw:
+- Blockchain
+- Cryptocurrency
+- Privacy
+- Zero Knowledge
+- Layer 1
+- Web3
+- RPC
 - Wallet
 apis:
 - name: Iron Fish Public REST API
