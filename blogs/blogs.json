@@ -2,6 +2,20 @@
   "repo": "iron-fish",
   "feeds": [
     {
+      "source": "https://ironfish.network/learn/blog/feed.rss",
+      "feed_url": "https://ironfish.network/learn/blog/feed.rss",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://ironfish.network/learn/blog",
+      "feed_url": "https://ironfish.network/learn/blog/feed.rss",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    },
+    {
       "source": "https://github.com/iron-fish",
       "feed_url": "https://github.com/iron-fish",
       "title": "",
@@ -10,5 +24,5 @@
     }
   ],
   "post_count": 0,
-  "fetched": "2026-10-03T12:30:02Z"
+  "fetched": "2026-10-10T13:15:00Z"
 }
